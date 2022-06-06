@@ -33,73 +33,72 @@ a {
   box-sizing: border-box;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Archivo black";
 }
 
-h2{color: #f5d61b;}
+h2 {
+  color: #f5d61b;
+}
 
 main {
   height: 100%;
   width: 100%;
   height: 3000px;
-
 }
-section.first{
+section.first {
   position: relative;
   height: 100vh;
-  
 }
-section.second{
+section.second {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 6rem;
-  
 }
 
-section.second h2{
+section.second h2 {
   font-size: 50px;
 }
 
-.primo-testo{
+.primo-testo {
   position: absolute;
   top: 80vh;
   max-width: 700px;
   right: 10%;
 }
-.primo-testo h2{
+.primo-testo h2 {
   color: #f5d61b;
   font-size: 100px;
   margin: 0;
 }
-.primo-testo p{
+.primo-testo p {
   color: white;
-  font-family: 'Archivo light';
+  font-family: "Archivo light";
   letter-spacing: 1px;
   line-height: 28px;
   margin: 0;
 }
-.wrap-text-back{
+.wrap-text-back {
   max-width: 1010px;
   line-height: 0.8;
   position: absolute;
   top: 160px;
   right: 20%;
-  z-index:0;
+  z-index: 0;
 }
-.wrap-text-back div{
-  color: #6F0E20;
-  font-family: 'Archivo Black';
+.wrap-text-back div {
+  color: #6f0e20;
+  font-family: "Archivo Black";
   font-size: 20vw;
   text-transform: uppercase;
-  margin:0;
+  margin: 0;
   hyphens: auto;
   word-break: break-all;
-
 }
 
-.wrap-colombia-map{
+.wrap-colombia-map {
   position: absolute;
   left: -240px;
   z-index: 1;
@@ -113,34 +112,105 @@ section.second h2{
   line-height: 0.8;
   text-indent: -86px;
 }
-.wrapper-box-text{
+.wrapper-box-text {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
 
-.box-text{
+.box-text {
   position: relative;
-  flex-basis: 200px; 
+  flex-basis: 200px;
   text-align: center;
   padding: 10px;
 }
 
-.box-text h2{
+.box-text h2 {
   font-size: 70px;
 }
 
-.box-text p{
+.box-text p {
   line-height: 1.2;
-  font-family: 'Archivo Black';
+  font-family: "Archivo Black";
 }
 
-.wrapper-lista{
+.wrapper-lista {
   display: flex;
   flex-wrap: wrap;
   max-width: 900px;
 }
-.wrapper-lista .item-lista{
+.wrapper-lista .item-lista {
   flex-basis: 70px;
   margin: 13px;
+  position: relative;
+}
+
+.item-lista .wrapper-info {
+  position: absolute;
+  top: 30%;
+  opacity: 0.8;
+  color: white;
+  font-family: "Archivo black";
+  width: max-content;
+  z-index: 100;
+  text-align: center;
+  background: #471313;
+  padding: 12px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.item-lista {
+  z-index: 1;
+  cursor: pointer;
+  transition: transform ease-in-out 0.3s;
+}
+
+.item-lista.default {
+  transform: scale(1);
+  z-index: 0;
+}
+
+.item-lista.on{
+  transform: scale(1);
+  z-index: 1;
+ 
+}
+.item-lista.off {
+  transform: scale(0.8);
+  z-index: 0;
+}
+
+.dettagli {
+  font-family: "Archivo Light";
+  letter-spacing: 2px;
+  background-color: #570f16;
+  padding: 10px;
+  border-radius: 10px;
+}
+.nome{
+  margin-bottom: 0.5rem;
+}
+.data{
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-family: 'Archivo Light';
+  font-size: 18px;
+}
+.ruolo{
+  font-family: 'Archivo Black';
+}
+.comune{font-size: 15px;
+margin: 10px 0 0 0;}
+
+.intestazione {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.intestazione .anno{
+  font-family: 'Archivo Black';
+  color: #f5d61b;
+  font-size: 130px;
+  margin-right: 1rem;
 }

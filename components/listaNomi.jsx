@@ -4,16 +4,9 @@ import { motion, useViewportScroll, useTransform, AnimatePresence } from 'framer
 import ItemLista from './itemLista'
 
 function ListaNomi({ data }) {
-
-    const { scrollYProgress, scrollY } = useViewportScroll()
-    const yValue = useTransform(scrollYProgress, [0.1, 0.4], [0, 1])
-    //se scrollYProgress è tra 0(min) e 1 (max) allora incrementa da 650 e x
-
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-        }
+ const container = {
+        hidden: { opacity: 0},
+        show: {opacity: 1}
     };
 
     const [openInfo, setOpenInfo] = useState(false)
@@ -26,7 +19,14 @@ function ListaNomi({ data }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-            <h2>Colombia: <br /> Cimitero Sociale </h2>
+           {inView  && 
+           <motion.div 
+             initial={{ opacity: 0, top:-100 }}
+             animate={{ opacity: 1, top:0 }}
+             transition={{duration:0.5}}
+            className="intestazione">
+              <div className='anno'>2022</div>  <h2>Colombia: <br /> Cimitero Sociale </h2>
+            </motion.div>}
             <AnimatePresence>
                 {inView && <motion.div className="wrapper-lista"
                     variants={container}
