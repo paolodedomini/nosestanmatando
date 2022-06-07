@@ -15,7 +15,7 @@ function ListaNomi({ data }) {
     return (
         <motion.div
             ref={ref}
-            style={{ width: '100%', maxWidth: 900 }}
+            style={{ width: '100%', maxWidth: 980 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>

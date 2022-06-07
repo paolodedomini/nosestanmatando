@@ -80,6 +80,16 @@ section.second h2 {
   line-height: 28px;
   margin: 0;
 }
+.first-bird {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+.second-bird {
+  position: absolute;
+  left: -10px;
+  z-index: 0;
+}
 .wrap-text-back {
   max-width: 1010px;
   line-height: 0.8;
@@ -137,7 +147,7 @@ section.second h2 {
 .wrapper-lista {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 980px;
 }
 .wrapper-lista .item-lista {
   flex-basis: 70px;
@@ -148,16 +158,18 @@ section.second h2 {
 .item-lista .wrapper-info {
   position: absolute;
   top: 30%;
-  opacity: 0.8;
+  opacity: 1;
   color: white;
   font-family: "Archivo black";
   width: max-content;
   z-index: 100;
   text-align: center;
-  background: #471313;
+  background: #242472;
   padding: 12px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .item-lista {
   z-index: 1;
@@ -170,37 +182,43 @@ section.second h2 {
   z-index: 0;
 }
 
-.item-lista.on{
+.item-lista.on {
   transform: scale(1);
   z-index: 1;
- 
 }
 .item-lista.off {
-  transform: scale(0.8);
+  transform: scale(0.9);
   z-index: 0;
 }
 
 .dettagli {
   font-family: "Archivo Light";
   letter-spacing: 2px;
-  background-color: #570f16;
-  padding: 10px;
-  border-radius: 10px;
+  background-color: #2f3d7838;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
 }
-.nome{
+.nome {
   margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  font-size: 20px;
 }
-.data{
+.data {
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  font-family: 'Archivo Light';
+  font-family: "Archivo Light";
   font-size: 18px;
 }
-.ruolo{
-  font-family: 'Archivo Black';
+.ruolo {
+  font-family: "Archivo Black";
+  color: #fff;
+  font-size: 20px;
 }
-.comune{font-size: 15px;
-margin: 10px 0 0 0;}
+.comune {
+  font-size: 15px;
+  margin: 10px 0 0 0;
+}
 
 .intestazione {
   display: flex;
@@ -208,9 +226,19 @@ margin: 10px 0 0 0;}
   position: relative;
 }
 
-.intestazione .anno{
-  font-family: 'Archivo Black';
+.intestazione .anno {
+  font-family: "Archivo Black";
   color: #f5d61b;
   font-size: 130px;
   margin-right: 1rem;
+}
+.bottom-bird {
+  position: absolute;
+  right: -30px;
+}
+.head-image {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  height: 14vw;
 }

@@ -4,7 +4,7 @@ import Image from 'next/image'
 const animateInfo = {
     hidden: { opacity: 0, top: 0 },
     show: {
-        opacity: 0.7, top: -130, transition: {
+        opacity: 0.9, top: -130, transition: {
             type: "spring", stiffness: 50
         }
     },
@@ -37,8 +37,9 @@ function InfoLista({ nome, cognome, data, ruolo, comune, dipartimento }) {
         >
             <div className="simbol"><Image src="/images/croce.svg" width={15} height={35} alt="croce" /></div>
             <div className="dati">
-                <div ref={boxInfo} className="nome">{nome} {cognome}</div>
+                <div ref={boxInfo} className="nome">{nome} <br /> {cognome}</div>
                 <div className="data">{data}</div>
+                <div className="comune">{comune}-{dipartimento}</div>
 
                 <div
                     className="dettagli"
@@ -47,7 +48,6 @@ function InfoLista({ nome, cognome, data, ruolo, comune, dipartimento }) {
                     show="show"
                 >
                     <div className="ruolo">- {ruolo} -</div>
-                    <div className="comune">{comune}-{dipartimento}</div>
                 </div>
 
             </div>

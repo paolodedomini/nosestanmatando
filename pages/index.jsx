@@ -5,6 +5,10 @@ import ColombiaMap from "../components/colombiaMap";
 import TextBack from "../components/textBack";
 import FirstText from "../components/firstText";
 import ListaNomi from "../components/listaNomi";
+import FirstBird from "../components/firstBird";
+import MiddleBird from "../components/middleBird";
+import ThirdBird from "../components/thirdBird";
+import Header from "../components/header";
 export default function Home() {
 
   const [data, setData] = React.useState(null)
@@ -52,15 +56,18 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
-
+      <Header />
       <main className={styles.main}>
         <section className="first">
           <ColombiaMap speed={5} />
+          <FirstBird />
           <TextBack speed={0} />
           <FirstText speed={-2} />
         </section>
         <section className="second">
           <ListaNomi data={data} />
+          <MiddleBird />
+          <ThirdBird />
         </section>
 
 
