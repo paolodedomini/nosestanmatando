@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import { motion, useViewportScroll, useTransform, AnimatePresence } from 'framer-motion'
 import ItemLista from './itemLista'
 
 function ListaNomi({ data }) {
- const container = {
-        hidden: { opacity: 0},
-        show: {opacity: 1}
+
+    const [visibilitaLista, setVisibilitalista] = useState(false)
+
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
     };
+
+
+    useEffect(() => {
+        if (inView) { setVisibilitalista(true) }
+    })
 
     const [openInfo, setOpenInfo] = useState(false)
     const { ref, inView } = useInView()
@@ -19,22 +28,22 @@ function ListaNomi({ data }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-           {inView  && 
-           <motion.div 
-             initial={{ opacity: 0, top:-100 }}
-             animate={{ opacity: 1, top:0 }}
-             transition={{duration:0.5}}
-            className="intestazione">
-              <div className='anno'>2022</div>  <h2>Colombia: <br /> Cimitero Sociale </h2>
-            </motion.div>}
+            {visibilitaLista &&
+                <motion.div
+                    initial={{ opacity: 0, top: -100 }}
+                    animate={{ opacity: 1, top: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="intestazione">
+                    <div className='anno'>2022</div>  <h2>Colombia: <br /> Cimitero Sociale </h2>
+                </motion.div>}
             <AnimatePresence>
-                {inView && <motion.div className="wrapper-lista"
+                {visibilitaLista && <motion.div className="wrapper-lista"
                     variants={container}
                     initial="hidden"
                     animate="show"
                     exit="hidden"
                 >
-                    {data && data.data?.map((item, index) => {  
+                    {data && data.data?.map((item, index) => {
 
                         return (
                             <ItemLista

@@ -8,7 +8,10 @@ import ListaNomi from "../components/listaNomi";
 import FirstBird from "../components/firstBird";
 import MiddleBird from "../components/middleBird";
 import ThirdBird from "../components/thirdBird";
+import Edera from "../components/edera";
 import Header from "../components/header";
+import { FormAlert } from "../components/form";
+import Lastbird from "../components/lastbird";
 export default function Home() {
 
   const [data, setData] = React.useState(null)
@@ -33,11 +36,16 @@ export default function Home() {
 
   React.useEffect(() => {
     getData()
+   
+  window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
   }, [])
 
 
   return (
-    <div className={styles.container}>
+    <div className='test'>
       <Head>
 
         <title>Create Next App</title>
@@ -68,8 +76,13 @@ export default function Home() {
           <ListaNomi data={data} />
           <MiddleBird />
           <ThirdBird />
+          <Edera position="right" />
+          <Edera position="left" />
         </section>
-
+        <section className="third">
+          <Lastbird />
+          <FormAlert />
+        </section>
 
       </main>
 

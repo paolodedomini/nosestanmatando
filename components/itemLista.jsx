@@ -18,7 +18,7 @@ function ItemLista({ item, index, openInfo, setOpenInfo }) {
       className={`item-lista ${((openInfo !== index) && (openInfo !== false)) ? 'off' : 'on'} ${(openInfo === false) ? 'default' : ''}`}
       variants={animateItem}
       initial="hidden"
-      whileInView="show"
+      animate="show"
       onMouseEnter={() => setOpenInfo((prev) => prev === index ? false : index)}
       onMouseLeave={() => { setOpenInfo(false); setDettagliOpen(false) }}
     >

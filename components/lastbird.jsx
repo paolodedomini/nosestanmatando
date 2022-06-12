@@ -5,20 +5,18 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 
 
-function MiddleBird() {
+function Lastbird() {
     const { scrollYProgress } = useViewportScroll()
-    const yValue = useTransform(scrollYProgress, [0, 1], [1650, 0 ])
+    const yValue = useTransform(scrollYProgress, [0, 1], [0, -300 ])
     const opacityValue = useTransform(scrollYProgress, [0.4, 0.6], [0.3,1 ])
 
   return (
     <motion.div 
-    className='second-bird'
-
-    style={{top: yValue, opacity: opacityValue}}
-    >
-    <Image src="/images/middlebird.png" alt="middlebird" width={438} height={180} />
+    className='last-bird'
+    style={{top: yValue, opacity: opacityValue}}>
+    <Image src="/images/lastbird.png" alt="middlebird" width={290} height={358} />
     </motion.div>
   )
 }
 
-export default MiddleBird
+export default Lastbird

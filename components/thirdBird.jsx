@@ -4,7 +4,7 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 function ThirdBird() {
     const { scrollYProgress } = useViewportScroll()
-    const yValue = useTransform(scrollYProgress, [0, 1], [1100, -800 ])
+    const yValue = useTransform(scrollYProgress, [0, 1], [500, -600 ])
     const opacityValue = useTransform(scrollYProgress, [0.4, 0.6], [0.7, 1 ])
 
   return (
