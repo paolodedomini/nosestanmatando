@@ -7,7 +7,6 @@ function ItemLista({ item, index, openInfo, setOpenInfo }) {
   const animateItem = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { delay: 0.12 * index } },
-
   }
 
   const [dettagliOpen, setDettagliOpen] = useState(false)

@@ -47,6 +47,7 @@ function ListaNomi({ data }) {
 
                         return (
                             <ItemLista
+                                key={index}
                                 item={item}
                                 index={index}
                                 openInfo={openInfo}

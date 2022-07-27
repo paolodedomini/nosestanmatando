@@ -20,12 +20,12 @@ body {
   padding: 0;
   margin: 0;
   background-color: #570f16;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
-body::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 h1 {
   color: #f5d61b;
@@ -80,6 +80,7 @@ section.second h2 {
   top: 80vh;
   max-width: 700px;
   right: 10%;
+  z-index: 100;
 }
 .primo-testo h2 {
   color: #f5d61b;
@@ -103,7 +104,7 @@ section.second h2 {
   left: -10px;
   z-index: 0;
 }
-.last-bird{
+.last-bird {
   position: absolute;
   right: -20px;
   z-index: 100;
@@ -130,13 +131,15 @@ section.second h2 {
   position: absolute;
   left: -240px;
   z-index: 1;
+  width: 50%;
+  top: -520px;
 }
 
 .wrap-colombia-map h1 {
   position: absolute;
   left: 420px;
   top: 44%;
-  font-size: 170px;
+  font-size: 8vw;
   line-height: 0.8;
   text-indent: -86px;
 }
@@ -263,41 +266,42 @@ section.second h2 {
   height: 14vw;
 }
 
-.edera{
+.edera {
   position: absolute;
   display: inline-block;
 }
-.edera.right{
+.edera.right {
   right: 0;
 }
-.edera.left{
+.edera.left {
   left: 0;
   transform: rotateY(180deg);
 }
-#form-alert .nota{
+#form-alert .nota {
   font-size: 60px;
   color: #f5d61b;
   font-family: "Archivo Black";
   margin: 0;
 }
-#form-alert p{
-  color:white;
-  font-family: 'Archivo Light';
+#form-alert p {
+  color: white;
+  font-family: "Archivo Light";
   margin: 5px;
   font-size: 18px;
   letter-spacing: 1px;
 }
-#form-alert{
-max-width: 900px;
-width: 100%;
-padding: 50px;
-background-color: #430606;
-display: inline-block;
-position: relative;
-z-index: 1;
+#form-alert {
+  max-width: 900px;
+  width: 100%;
+  padding: 50px;
+  background-color: #430606;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
 }
 
-form#form-alert input, form#form-alert textarea {
+form#form-alert input,
+form#form-alert textarea {
   width: 100%;
   border: 0;
   outline: 0;
@@ -305,9 +309,9 @@ form#form-alert input, form#form-alert textarea {
   border-radius: 10px;
   margin: 1rem 0;
 }
-form#form-alert span{
+form#form-alert span {
   color: white;
-  font-family: 'Archivo Light';
+  font-family: "Archivo Light";
 }
 button.alert-big {
   border: 0;
@@ -317,9 +321,9 @@ button.alert-big {
   font-size: 18px;
   float: right;
 }
-.wrapper-form{
+.wrapper-form {
   width: 90%;
-  text-align:center;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,4 +340,41 @@ button.alert-big {
   z-index: 0;
   opacity: 0.6;
   filter: sepia();
+}
+
+@media screen and (max-width: 1500px) {
+  .wrap-colombia-map {
+    position: relative;
+    top: 0px;
+    width: 763px;
+  }
+  .wrap-colombia-map h1 {
+    font-size: 100px;
+  }
+  .wrap-text-back {
+    right: 0%;
+  
+}
+.wrap-text-back div{
+  font-size: 32vw;
+}
+  .primo-testo {
+    position: relative;
+    top: 0 !important;
+    right: 10%;
+    left: 80px;
+    width: 100%;
+  }
+  section.second {
+    margin-top: 31rem;
+  }
+  section.third {
+    margin-top: 18rem;
+  }
+  .edera.right {
+    top: 200px;
+  }
+  .edera.left {
+    top: 200px;
+  }
 }

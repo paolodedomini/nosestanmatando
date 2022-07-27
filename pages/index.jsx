@@ -68,9 +68,9 @@ export default function Home() {
       <main className={styles.main}>
         <section className="first">
           <ColombiaMap speed={5} />
+          <FirstText speed={-2} /> 
           <FirstBird />
           <TextBack speed={0} />
-          <FirstText speed={-2} />
         </section>
         <section className="second">
           <ListaNomi data={data} />
